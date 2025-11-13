@@ -7,7 +7,7 @@ screen.addshape(image)
 
 turtle.shape(image)
 
-turtle.mainloop()
-
-
 answer_state = screen.textinput(title = "Guess the State", prompt = "What's another's state's name?")
+print(answer_state)
+
+turtle.mainloop()
