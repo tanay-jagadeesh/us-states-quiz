@@ -17,13 +17,11 @@ writer = turtle.Turtle()
 writer.hideturtle()
 writer.penup()
 while game_on:
-    answer_state = screen.textinput(title = "Guess the State", prompt = "What's another's state's name?").title()
+    answer_state = screen.textinput(title = f"{score}/50 states correct Guess the State", prompt = "What's another's state's name?").title()
     correct_guess = data[data["state"] == answer_state]
 
     if not correct_guess.empty:
         score += 1
-        print(f"{score}/50 states correct")
-        writer.penup()
         writer.goto(correct_guess["x"].iloc[0], correct_guess["y"].iloc[0])
         writer.write(correct_guess["state"].iloc[0])
 
