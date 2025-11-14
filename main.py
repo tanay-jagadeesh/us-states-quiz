@@ -15,7 +15,9 @@ data = pandas.read_csv("50_states.csv")
 
 correct_guess = data[data["state"] == answer_state]
 
-
+if not correct_guess.empty:
+    score += 1
+    print(f"{score}/50 states correct")
 
 
 
