@@ -13,9 +13,8 @@ answer_state = screen.textinput(title = "Guess the State", prompt = "What's anot
 
 data = pandas.read_csv("50_states.csv")
 
-if data[data["state"] == answer_state]:
-    print(data[data["x"]], data[data["y"]])
-    print(f"{score}/50 states correct")
+correct_guess = data[data["state"] == answer_state]
+
 
 
 
